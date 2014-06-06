@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />    
+  </head>
+  <body>
+  	<div class="container">
+		<nav class="navbar navbar-default" role="navigation">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="#">MicroTrx</a>
+		    </div>
+		
+		
+		  </div><!-- /.container-fluid -->
+		</nav>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Generate Key</h3>
+		  </div>
+		  <div class="panel-body">
+		    
+		    <form role="form" id="create-key-form">
+				<div class="form-group">
+				  <label id="secret-password">"Secret" Password</label>
+				  <input type="text" class="form-control" rows="3" id="secretKeyPassword"></input>
+				</div>
+				<button type="submit" class="btn btn-default" >Submit</button>			  			  
+			</form>
+			<br />
+			<h5>Private Key (Hex)</h5>
+			<div id="generated-private-key" class="well"> </div>
+			<h5>Public Key</h5>
+			<div id="generated-public-key" class="well"> </div>
+			
+		  </div>
+		</div>
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title">Sign Message</h3>
+		  </div>
+		  <div class="panel-body">
+		    
+		    <form role="form" id="sign-message-form">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Message Text</label>
+			    <textarea class="form-control" rows="3" id="messageTextToSign"></textarea>
+			  </div>
+			  <button type="submit" class="btn btn-default">Sign</button>			  			  
+			</form>
+			<br />
+			<h5>Signature Hash</h5>
+			<div id="signedMessageHash" class="well"></div>
+						
+			<form role="form" id="validate-signature-form">			 
+			  <button type="submit" class="btn btn-default">Validate</button>			  			  
+			</form>
+			<h5>Validation Result</h5>
+			<div id="validationResult" class="well"></div>
+		  </div>
+		</div>
+		
+		
+	</div>
+	
+	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.1.1.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    
+    <script src="js/bitcore.js"></script>
+    <script src="js/client.examples.js"></script>
+    
+  </body>
+</html>
