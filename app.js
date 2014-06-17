@@ -10,8 +10,11 @@ var examples = require('./routes/examples');
 var client = require('./routes/client');
 var http = require('http');
 var path = require('path');
+var mongoose = require('mongoose');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost/test');
 
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -34,7 +37,7 @@ app.get('/', routes.index);
 app.get('/examples', examples.index);
 app.get('/client', client.index);
 
-app.post('/api/v1/account', api.userAccount);
+app.post('/api/v1/account', api.account);
 app.get('/api/v1/balance/:address', api.balance);
 
 http.createServer(app).listen(app.get('port'), function(){
