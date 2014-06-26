@@ -23,7 +23,7 @@ The wallet asks Charlie to confirm to create a new Micro Payment Channel with Mi
 
 Charlie's wallet makes a connection to MicroTrx and initiates the Payment Channel.  Once this is confirmed, the wallet also pulls information in the payment request from the page loaded in the browser on New.Example.com and gets a transaction ID that would allow Charlie to read this article.  The wallet then sends a message to MicroTrx to request payment from the Payment Channel to be used for this transaction ID.
 
-Once MicroTrx validates the payment request from Charlie to News.Example.com, it tags the payment request as paid.  This in turn triggers a asynchronous javascript call to executed which in turn authorizes the article to be shown to Charlie in his browser.
+Once MicroTrx validates the payment request from Charlie to News.Example.com, it tags the payment request as paid.  This in turn triggers a asynchronous javascript call to be executed which in turn authorizes the article to be shown to Charlie in his browser.
 
 Charlie is happy.
 
